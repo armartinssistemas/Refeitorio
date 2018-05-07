@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="Refeitorio.Principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Refeitótio</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="row">
+                <nav class="col-md-3 col-lg-3">
+                    <asp:TreeView ID="TreeView1" runat="server">
+                        <Nodes>
+                            <asp:TreeNode Text="Cadastros" Value="Cadastros">
+                                <asp:TreeNode Text="Usuário" Value="Usuário" NavigateUrl="~/paginas/CadUsuariosaspx.aspx"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </Nodes>
+                    </asp:TreeView>
+                </nav>
+                <section class="col-md-9 col-lg-9">
+                    <asp:ContentPlaceHolder ID="conteudo" runat="server"></asp:ContentPlaceHolder>
+                </section>
+            </div>
+        </div>
+     </form>
+</body>
+</html>
